@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fardad DanaeeFard · Bioinformatician & Medical Geneticist</title>
+  <meta name="description" content="Fardad DanaeeFard is a bioinformatician and medical geneticist who builds production-grade NGS pipelines, from FASTQ to clinical insight." />
+  <meta name="theme-color" content="#070b14" />
+  <meta property="og:title" content="Fardad DanaeeFard · Bioinformatician & Medical Geneticist" />
+  <meta property="og:description" content="Production-grade genomics pipelines, clinical variant interpretation and rare-disease research." />
+  <meta property="og:url" content="https://fardad.tech" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__logo" aria-label="Home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke-width="4" stroke-linecap="round"><path d="M20 10c0 14 24 14 24 22s-24 8-24 22" stroke="var(--a)"/><path d="M44 10c0 14-24 14-24 22s24 8 24 22" stroke="var(--t)"/></g></svg>
+      <span>Fardad<em>.tech</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas id="helix" class="hero__helix" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <p class="eyebrow reveal"><span class="dot"></span> Bioinformatician · Medical Geneticist</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Fardad</span></span>
+          <span class="line"><span class="word italic">DanaeeFard</span></span>
+        </h1>
+        <p class="hero__lede reveal">
+          I build production-grade genomics pipelines that turn raw sequencing reads into
+          <span class="typed" data-words="clinical insight.|causative variants.|cancer biomarkers.|reproducible science."></span><span class="caret">▍</span>
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#pipeline" class="btn btn--primary magnetic"><span>Explore my work</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#contact" class="btn btn--ghost magnetic"><span>Get in touch</span></a>
+        </div>
+
+        <dl class="stats reveal">
+          <div class="stat"><dt><span class="count" data-to="0.99" data-decimals="2">0</span></dt><dd>F1 / recall on GIAB truth sets</dd></div>
+          <div class="stat"><dt>&lt;<span class="count" data-to="1">0</span>h</dt><dd>to process each exome</dd></div>
+          <div class="stat"><dt><span class="count" data-to="4">0</span></dt><dd>peer-reviewed publications</dd></div>
+          <div class="stat"><dt><span class="count" data-to="21">0</span><sup>st</sup></dt><dd>of 65,333 in the national M.Sc. exam</dd></div>
+        </dl>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- sequence ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="ticker"></div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2>From the hematology bench <em>to the command line.</em></h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p class="big">
+            I started out in a hematology lab, running blood tests for patients with leukemia.
+            Today I write the software that reads their genomes.
+          </p>
+          <p>
+            I trained in Medical Laboratory Sciences and Human Genetics, and my work now sits where clinical
+            genetics meets software engineering. I design scalable <strong>Nextflow</strong> pipelines,
+            benchmark variant callers against GIAB truth sets, and write clinical reports
+            that help families get a diagnosis.
+          </p>
+          <p>
+            My research covers hereditary spastic paraplegia, rare neurological disorders, cancer
+            transcriptomics, and endogenous retroviruses in Parkinson’s disease at single-cell resolution.
+          </p>
+          <ul class="about__facts">
+            <li><span>Based in</span>Tehran, Iran</li>
+            <li><span>Degree</span>M.Sc. Human Genetics</li>
+            <li><span>English</span>IELTS 8 · TOEFL 110</li>
+            <li><span>Honor</span>MSCA DISCOVER PhD Scholarship</li>
+          </ul>
+        </div>
+
+        <figure class="vcf reveal tilt">
+          <div class="window-bar"><i></i><i></i><i></i><span>fardad.vcf</span></div>
+          <pre><code><span class="c">##fileformat=VCFv4.3</span>
+<span class="c">##source=fardad.tech</span>
+<span class="c">##INFO=&lt;ID=ROLE,Description="Current calling"&gt;</span>
+<span class="h">#CHROM  POS   ID      REF     ALT</span>
+chrIR   2015  <span class="k">fardad</span>  <span class="ref">MedLab</span>  <span class="alt">Bioinformatics</span>
+
+<span class="h">QUAL  FILTER</span>
+<span class="n">99</span>    <span class="pass">PASS</span>
+
+<span class="h">INFO</span>
+<span class="k">ROLE</span>=Bioinformatician,Medical_Geneticist;
+<span class="k">FOCUS</span>=Rare_Disease,Cancer_Genomics,scRNA;
+<span class="k">STACK</span>=Nextflow,GATK,DeepVariant,Spark;
+<span class="k">LANG</span>=Python,Rust,R,Bash,Groovy;
+<span class="k">ACMG</span>=<span class="alt">Pathogenic</span>   <span class="c"># for bad pipelines</span></code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PIPELINE ============ -->
+    <section class="section pipeline" id="pipeline">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2>PAPCO: <em>FASTQ to clinic in under an hour.</em></h2>
+        <p class="section__sub">The Nextflow (DSL2) suite I designed and built at Genomist Ltd. It is containerized, versioned and benchmarked, and it runs in clinical production.</p>
+      </div>
+
+      <div class="dag reveal" id="dag">
+        <svg class="dag__wires" viewBox="0 0 1000 420" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="wire" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0"><stop offset="0" stop-color="var(--a)"/><stop offset="1" stop-color="var(--t)"/></linearGradient>
+          </defs>
+          <path class="wire" d="M95 210 C140 210 150 210 195 210"/>
+          <path class="wire" d="M305 210 C340 210 350 210 395 210"/>
+          <path class="wire" d="M505 210 C540 210 540 110 585 110"/>
+          <path class="wire" d="M505 210 C540 210 540 310 585 310"/>
+          <path class="wire" d="M695 110 C730 110 730 210 765 210"/>
+          <path class="wire" d="M695 310 C730 310 730 210 765 210"/>
+          <path class="wire" d="M875 210 C890 210 895 210 905 210"/>
+        </svg>
+        <div class="node" style="--x:5%;--y:50%" data-step="1"><b>FASTQ</b><small>raw reads · QC</small></div>
+        <div class="node" style="--x:25%;--y:50%" data-step="2"><b>DRAGMAP</b><small>alt-masked ref</small></div>
+        <div class="node" style="--x:45%;--y:50%" data-step="3"><b>Scatter</b><small>contig-aware · gender-aware</small></div>
+        <div class="node node--a" style="--x:64%;--y:26%" data-step="4"><b>GATK</b><small>HaplotypeCaller</small></div>
+        <div class="node node--t" style="--x:64%;--y:74%" data-step="4"><b>DeepVariant</b><small>CNN caller</small></div>
+        <div class="node" style="--x:82%;--y:50%" data-step="5"><b>Spark · Glow</b><small>callset merge</small></div>
+        <div class="node node--end" style="--x:96%;--y:50%" data-step="6"><b>Report</b><small>ACMG · HPO</small></div>
+      </div>
+
+      <div class="pipeline__grid">
+        <div class="terminal reveal">
+          <div class="window-bar"><i></i><i></i><i></i><span>~/papco — nextflow run</span></div>
+          <pre id="term" aria-label="Simulated pipeline log"></pre>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <span class="feature__icon">◆</span>
+            <h3>Dual-caller strategy</h3>
+            <p>GATK and DeepVariant calls are merged with Spark/Glow, reaching <strong>0.99 F1/recall</strong> on GIAB benchmarks.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon">◇</span>
+            <h3>Scatter / gather at scale</h3>
+            <p>Parallel processing brings each exome under <strong>one hour</strong>, fast enough for high-throughput cohorts.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon">◈</span>
+            <h3>Phenotype-aware CNV</h3>
+            <p>HPO-integrated CNV calling plus cancer biomarker modules for <strong>TMB, MSI, ROH and LOH</strong>.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon">▣</span>
+            <h3>Reproducible by design</h3>
+            <p>Every module is pinned with Docker and DSL2 versioning. DRAGMAP replaces BWA to resolve complex regions better.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2>Experience, <em>mapped like a chromosome.</em></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="chromosome" aria-hidden="true"><div class="chromosome__fill"></div></div>
+
+        <article class="job reveal">
+          <div class="job__locus">q36.1 · 2025–2026</div>
+          <div class="job__card tilt">
+            <header><h3>Bioinformatician & Medical Geneticist</h3><p>Genomist Ltd. · Tehran</p></header>
+            <ul>
+              <li>Designed and built <strong>PAPCO</strong>, a production Nextflow DSL2 suite using DRAGMAP and an alt-masked reference.</li>
+              <li>Built the GATK + DeepVariant dual-caller workflow with Spark/Glow merging. It scores 0.99 F1 on GIAB.</li>
+              <li>Developed the HPO-aware CNV module and the TMB / MSI / ROH / LOH biomarker modules.</li>
+              <li>Wrote clinical reports for Mendelian disorders, recurrent pregnancy loss, ACMG secondary findings and carrier status.</li>
+            </ul>
+            <div class="tags"><span>Nextflow</span><span>DRAGMAP</span><span>DeepVariant</span><span>Spark/Glow</span><span>ACMG</span></div>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job__locus">q32.2 · 2025</div>
+          <div class="job__card tilt">
+            <header><h3>Research Consultant</h3><p>BOKU University, Vienna · Remote</p></header>
+            <ul>
+              <li>Built a PacBio long-read pipeline that detects SNVs, indels, STRs and CNVs in grapevine.</li>
+              <li>Designed the case-control statistics for identifying disease variants, and advised on PhD pipeline methods.</li>
+            </ul>
+            <div class="tags"><span>PacBio</span><span>Long-read</span><span>STR</span><span>Statistics</span></div>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job__locus">p21.3 · 2024–2025</div>
+          <div class="job__card tilt">
+            <header><h3>Research Assistant</h3><p>Shahid Sadoughi University of Medical Sciences · Remote</p></header>
+            <ul>
+              <li>Led pipeline development to map the transcriptional landscape of colorectal cancer from NCBI-GEO data.</li>
+              <li>Found new pathways through functional annotation and enrichment analysis, supervised by Prof. Mahta Mazaheri.</li>
+            </ul>
+            <div class="tags"><span>RNA-seq</span><span>GEO</span><span>GSEA</span><span>limma</span></div>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job__locus">p16.1 · 2023</div>
+          <div class="job__card tilt">
+            <header><h3>NGS Data Analyst</h3><p>MOM Fertility Clinic · Remote</p></header>
+            <ul>
+              <li>Identified variants in Mendelian disease, cancer and familial infertility, and wrote clinical reports for genetic counseling.</li>
+            </ul>
+            <div class="tags"><span>WES</span><span>Variant interpretation</span></div>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job__locus">p13 · 2021</div>
+          <div class="job__card tilt">
+            <header><h3>Course Instructor</h3><p>Salvia Medical Sciences · CytoCity · Royan Institute</p></header>
+            <ul>
+              <li>Taught NGS and WES analysis, from FASTQ to clinical insight, to 30+ students online during COVID-19.</li>
+            </ul>
+            <div class="tags"><span>Teaching</span><span>R</span><span>WES</span></div>
+          </div>
+        </article>
+
+        <article class="job reveal">
+          <div class="job__locus">p11.2 · 2016–2019</div>
+          <div class="job__card tilt">
+            <header><h3>Medical Laboratory Technician, Hematology</h3><p>Zagross Medical Laboratory · Kermanshah</p></header>
+            <ul>
+              <li>Ran hematology tests for patients with ALL, AML and CLL, and managed the department's daily QC.</li>
+            </ul>
+            <div class="tags"><span>Hematology</span><span>QC</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="edu">
+        <article class="edu__card reveal">
+          <span class="edu__year">2019 — 2022</span>
+          <h3>M.Sc. Human Genetics</h3>
+          <p>University of Social Welfare and Rehabilitation Sciences, Tehran</p>
+          <p class="muted">Thesis: whole-exome sequencing in five Iranian families with hereditary spastic paraplegia to find disease-causing variants. Supervised by Dr. Afagh Alavi and Prof. Hossein Najmabadi.</p>
+        </article>
+        <article class="edu__card reveal">
+          <span class="edu__year">2015 — 2019</span>
+          <h3>B.Sc. Medical Laboratory Sciences</h3>
+          <p>Kermanshah University of Medical Sciences</p>
+          <p class="muted">Full scholarship recipient.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ RESEARCH ============ -->
+    <section class="section research" id="research">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2>Research <em>&amp; publications.</em></h2>
+        <p class="section__sub">Rare neurological disease genetics, cancer genomics and single-cell sequencing.</p>
+      </div>
+
+      <div class="pubs">
+        <a class="pub reveal" href="https://doi.org/10.18502/cjn.v24i2.20683" target="_blank" rel="noopener">
+          <span class="pub__date">Apr 2025</span>
+          <h3>Expanding the phenotypic spectrum of RNASEH2B mutations: a new case of pure hereditary spastic paraplegia and a systematic review</h3>
+          <p class="pub__journal">Current Journal of Neurology</p>
+          <span class="pub__arrow">↗</span>
+        </a>
+        <a class="pub reveal" href="https://doi.org/10.1017/cjn.2021.188" target="_blank" rel="noopener">
+          <span class="pub__date">Aug 2021</span>
+          <h3>Anticipation can be more common in hereditary spastic paraplegia with SPAST mutations than it appears</h3>
+          <p class="pub__journal">Canadian Journal of Neurological Sciences</p>
+          <span class="pub__arrow">↗</span>
+        </a>
+        <a class="pub reveal" href="https://doi.org/10.1017/cjn.2021.124" target="_blank" rel="noopener">
+          <span class="pub__date">Jun 2021</span>
+          <h3>Neurodegeneration with brain iron accumulation and a brief report of the disease in Iran</h3>
+          <p class="pub__journal">Canadian Journal of Neurological Sciences</p>
+          <span class="pub__arrow">↗</span>
+        </a>
+        <a class="pub reveal" href="https://doi.org/10.1002/ajmg.a.61983" target="_blank" rel="noopener">
+          <span class="pub__date">Feb 2021</span>
+          <h3>Clinical spectrum in multiple families with primary COQ10 deficiency</h3>
+          <p class="pub__journal">American Journal of Medical Genetics Part A</p>
+          <span class="pub__arrow">↗</span>
+        </a>
+      </div>
+
+      <h3 class="subhead reveal">Projects & presentations</h3>
+      <div class="projects">
+        <article class="project project--feature reveal tilt">
+          <span class="badge">In progress · UCPH collaboration</span>
+          <h4>HERV footprints in Parkinson’s disease at single-cell scale</h4>
+          <p>I built a custom composite reference of the human genome plus known HERVs to detect endogenous retroviruses in single-cell data from several Parkinson’s cohorts. This is a collaboration with Dr. Michael Lappe at BRIC, University of Copenhagen.</p>
+          <div class="tags"><span>scRNA-seq</span><span>Custom reference</span><span>HERVs</span></div>
+        </article>
+        <article class="project reveal tilt">
+          <span class="badge">First author · 2024</span>
+          <h4>New molecular & cellular pathways of IDH1 mutation in glioblastoma</h4>
+          <p>Seurat-based scRNA-seq analysis of GSE103224 showing adipocyte accumulation and weakened immune responses in IDH1 R132H tumors.</p>
+        </article>
+        <article class="project reveal tilt">
+          <span class="badge badge--gold">Best Poster Award · 2020</span>
+          <h4>AD-HSP, SPAST variations & evidence for anticipation</h4>
+          <p>Presented at the 4th International and 16th Iranian Genetics Congress.</p>
+        </article>
+        <article class="project reveal tilt">
+          <span class="badge">ESHG · 2022</span>
+          <h4>Genetic heterogeneity & novel genes in Iranian HSP patients</h4>
+          <p>European Human Genetics Conference 2022.</p>
+        </article>
+        <article class="project reveal tilt">
+          <span class="badge">BCNC · 2021</span>
+          <h4>RNASEH2B-related disorders: a network for differential diagnosis</h4>
+          <p>A systematic review using network analysis of clinical findings. Presented with a companion talk on HSP heterogeneity.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="section__head reveal">
+        <span class="section__index">05</span>
+        <h2>Toolkit, <em>expressed.</em></h2>
+        <p class="section__sub">Shown as an expression heatmap. Brighter cells mean deeper experience.</p>
+      </div>
+
+      <div class="skills__grid">
+        <div class="heatmap reveal" id="heatmap" role="table" aria-label="Programming language proficiency"></div>
+
+        <div class="skill-groups">
+          <div class="skill-group reveal"><h3>Genomics</h3><p>Germline & somatic variant calling · CNV · STR · PacBio long-read · WES · scRNA-seq · bulk RNA-seq · ChIP-seq · GIAB validation</p></div>
+          <div class="skill-group reveal"><h3>Pipelines</h3><p>Nextflow DSL2 · Docker / Singularity · scatter/gather · Spark / Glow · SLURM & HPC</p></div>
+          <div class="skill-group reveal"><h3>Clinical</h3><p>ACMG classification · HPO integration · TMB / MSI / ROH / LOH · clinical reporting</p></div>
+          <div class="skill-group reveal"><h3>AI engineering</h3><p>Model development & deployment · RAG · LLM fine-tuning · agentic AI · MLOps</p></div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Tools">
+        <div class="marquee__row">
+          <span>GATK</span><span>DeepVariant</span><span>Mutect2</span><span>NeuSomatic</span><span>DRAGMAP</span><span>BWA</span><span>SAMtools</span><span>BCFtools</span><span>VEP</span><span>ANNOVAR</span><span>Exomiser</span><span>Seurat</span><span>Scanpy</span>
+        </div>
+        <div class="marquee__row marquee__row--rev">
+          <span>DESeq2</span><span>edgeR</span><span>limma</span><span>GSEA</span><span>GSVA</span><span>Ensembl</span><span>ClinVar</span><span>dbSNP</span><span>HPO</span><span>GEO</span><span>SRA</span><span>dbGaP</span><span>GIAB</span><span>Git</span>
+        </div>
+      </div>
+
+      <div class="honors">
+        <div class="honor reveal"><span class="honor__k">MSCA</span><p>DISCOVER PhD Scholarship, H2020 Marie Skłodowska-Curie (2022)</p></div>
+        <div class="honor reveal"><span class="honor__k">★</span><p>Best Poster Award, Iranian Genetics Congress (2020)</p></div>
+        <div class="honor reveal"><span class="honor__k">#21</span><p>Out of 65,333 applicants, M.Sc. entrance exam (2019)</p></div>
+        <div class="honor reveal"><span class="honor__k">KAUST</span><p>Fundamental Skills in Bioinformatics, plus courses from Google, Imperial, Fred Hutch and IBM</p></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact__inner reveal">
+        <p class="eyebrow"><span class="dot"></span> Open to collaborations</p>
+        <h2 class="contact__title">Let’s decode<br /><em>something together.</em></h2>
+        <a class="contact__email magnetic" href="mailto:fardaddanaeefard95@gmail.com">fardaddanaeefard95@gmail.com</a>
+        <div class="contact__links">
+          <a href="https://www.linkedin.com/in/fardad-danaee-fard-8b685814a" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Fardad DanaeeFard</span>
+    <span class="mono">5′-ATG · · · TAA-3′</span>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
